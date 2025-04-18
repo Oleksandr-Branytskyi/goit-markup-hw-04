@@ -4,12 +4,17 @@ body {
   background-color: #ffffff;
 }
 
-h1, h2, h3, h4, h5, h6,
-p, ul {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
   margin: 0;
   padding: 0;
 }
-
 
 ul {
   list-style-type: none;
@@ -34,13 +39,14 @@ img {
 
 .header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
   display: flex;
   align-items: center;
 }
-
 
 .header-navigation {
   display: flex;
@@ -90,6 +96,31 @@ img {
   display: block;
   padding: 24px 0;
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-menu-link.current {
+  position: relative;
+  color: #404bbf;
+}
+.header-menu-link.current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #404bbf;
+}
+
+.header-address-link {
+  display: block;
+  padding: 24px 0;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover-focus-color:hover {
@@ -139,10 +170,16 @@ img {
 
 .hero {
   padding: 188px 0;
-  background-color: #2e2f42;
   text-align: center;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero-pg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
 
 .hero-title {
   max-width: 496px;
@@ -187,17 +224,17 @@ img {
 }
 
 .visually-hidden {
-color: rgba(0, 0, 0, 0);
-position: absolute;
-width: 1px;
-height: 1px;
-margin: -1px;
-border: 0;
-padding: 0;
-white-space: nowrap;
- clip-path: inset(100%);
-clip: rect(0 0 0 0);
-overflow: hidden;
+  color: rgba(0, 0, 0, 0);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .feature-list {
@@ -232,8 +269,7 @@ overflow: hidden;
 
 .team {
   background-color: #f4f4fd;
-   padding: 120px 0;
-  
+  padding: 120px 0;
 }
 
 .team-images {
@@ -272,9 +308,8 @@ overflow: hidden;
   border-radius: 0 0 4px 4px;
   background-color: #fff;
   overflow: hidden;
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.1),
-              0px 1px 1px rgba(0, 0, 0, 0.08),
-              0px 1px 6px rgba(0, 0, 0, 0.06);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.08),
+    0px 1px 6px rgba(0, 0, 0, 0.06);
 }
 
 .team-subtitle {
@@ -330,7 +365,6 @@ overflow: hidden;
   border: 1px solid #e7e9fc;
   border-top: none;
 }
-
 
 .portfolio-subtitle {
   margin-bottom: 8px;
