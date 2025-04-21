@@ -46,6 +46,7 @@ img {
 .header-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .header-navigation {
@@ -169,9 +170,9 @@ img {
 /* HERO */
 
 .hero {
-  padding: 188px 0;
   max-width: 1440px;
-  text-align: center;
+  padding: 188px 0;
+  margin: 0 auto;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -311,12 +312,8 @@ img {
 }
 
 .team-list {
-  background-color: #ffffff;
   display: flex;
   gap: 24px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .team-item {
